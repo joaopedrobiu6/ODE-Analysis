@@ -373,16 +373,16 @@ void ODE_analysis::Draw_Stability(const char *filename, int numero, double step)
 
     int n;
     int count = 0;
-    double step_delta = (1.2 - 0.02) / numero;
-    double step_epsilon = (0.5 - 0) / numero;
+    double step_delta = (10 - 0) / numero;
+    double step_epsilon = (10 - 0) / numero;
 
     auto h = new TH2D("h", "Stability Regions", numero + 1, 0.02, 1.2, numero + 1, 0, 0.5);
 
     double est = 1;
 
-    for (double delta = 0.02; delta <= 1.2; delta = delta + step_delta)
+    for (double delta = 0.00; delta <= 10; delta = delta + step_delta)
     {
-        for (double epsilon = 0; epsilon <= 0.5 + step_epsilon; epsilon = epsilon + step_epsilon)
+        for (double epsilon = 0; epsilon <= 10 + step_epsilon; epsilon = epsilon + step_epsilon)
         {
             ODE_analysis pendulum(2, {0.1, 0});
             pendulum.SetFunction(0, [](ODEpoint p)
@@ -391,7 +391,7 @@ void ODE_analysis::Draw_Stability(const char *filename, int numero, double step)
             pendulum.SetFunction(1, [&](ODEpoint p)
                                  { return -((delta + epsilon * std::cos(p.T())) * std::sin((p.X())[0])); });
 
-            std::vector<ODEpoint> resultado = pendulum.LeapFrogImprovedSolver(100, step);
+            std::vector<ODEpoint> resultado = pendulum.LeapFrogImprovedSolver(120, step);
             std::vector<double> mov_avg = Moving_Average(resultado, 5e-3, 5 / 5e-3);
 
             n = mov_avg.size();
@@ -412,7 +412,7 @@ void ODE_analysis::Draw_Stability(const char *filename, int numero, double step)
     }
     std::cout << std::endl;
 
-    TCanvas *c = new TCanvas("canvas", "pendulum_parametric", 0, 0, 6400, 3600);
+    TCanvas *c = new TCanvas("canvas", "pendulum_parametric", 0, 0, 1920, 1080);
 
     TStyle *mcStyle = new TStyle("mcStyle", "FC's Root Styles");
     mcStyle->SetPalette(kGreyYellow);

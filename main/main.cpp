@@ -29,8 +29,10 @@ int main()
     std::vector<ODEpoint> result_RK4 = pendulum.RungeKutta4(120, 1E-3);
     std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(120, 1E-3);
 
-    pendulum.ODE_Draw("euler.png", "time", "#hat{#theta}", 50, result_euler);
-    pendulum.ODE_Draw("RK4.png", "time", "#hat{#theta}", 50, result_RK4);
-    pendulum.ODE_Draw("leapfrog.png", "time", "#hat{#theta}", 50, result_leapfrog);
+    pendulum.ODE_Draw("images/euler.png", "time", "#hat{#theta}", 50, result_euler);
+    pendulum.ODE_Draw("images/RK4.png", "time", "#hat{#theta}", 50, result_RK4);
+    pendulum.ODE_Draw("images/leapfrog.png", "time", "#hat{#theta}", 50, result_leapfrog);
+
+    pendulum.Draw_Stability("images/stability.pdf", 150, 0.0125);
     return 0;
 }
