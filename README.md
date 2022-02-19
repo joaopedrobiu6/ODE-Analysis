@@ -5,6 +5,8 @@ In `src/` you can also find other classes with other tools: Numerical integratio
 
 Requires CERN's ROOT library (https://root.cern/) and Eigen Library (https://eigen.tuxfamily.org/index.php?title=Main_Page). 
 
+Python - MatPlotLib, NumPy, PyDMD, Pandas 
+
 
 
 all the code was written for computational physics course by: João Biu, Guilherme Lourinho, Miguel Lameiras, Pedro Fialho (IST - LEFT 2021/2022)
