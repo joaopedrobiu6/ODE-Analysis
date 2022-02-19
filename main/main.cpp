@@ -37,9 +37,9 @@ int main()
     // pendulum.Draw_Stability("images/stability.pdf", 150, 0.0125);
 
     std::ofstream outdata;
-    outdata.open("data1.txt"); // opens the file
+    outdata.open("data1.csv"); // opens the file
     if (!outdata)
-    { // file couldn't be opened
+    { // file couldn't be openedcsv
         std::cerr << "Error: file could not be opened" << std::endl;
         exit(1);
     }
