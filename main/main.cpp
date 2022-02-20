@@ -25,7 +25,6 @@ int main()
     pendulum.SetFunction(1, [&](ODEpoint p)
                          { return -((delta + epsilon * std::cos(p.T())) * std::sin((p.X())[0])); });
 
-<<<<<<< HEAD
     // std::vector<ODEpoint> result_euler = pendulum.EulerSolver(120, 0.0125);
     //std::vector<ODEpoint> result_RK4 = pendulum.RungeKutta4(30, 1E-1);
     std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(30, 1E-1);
@@ -51,13 +50,6 @@ int main()
     outdata.close();
 
     //Correr o ficheiro python para fazer o dynamic mode decomposition
-=======
-    std::vector<ODEpoint> result_RK4 = pendulum.RungeKutta4(30, 1E-1);
-
-    WriteData("data.txt", result_RK4);
-
-    // Correr o ficheiro python para fazer o dynamic mode decomposition
->>>>>>> d1e9e5f56c137e13e19636051afc9782de6055c3
     std::cout << "\nA correr o código python..." << std::endl;
     system("python3 main/ODEdmd.py");
 
