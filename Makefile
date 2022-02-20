@@ -32,7 +32,11 @@ bin/%.exe: bin/%.o lib/libFC.a
 
 bin/%.o: %.cpp
 	@echo compiling... $< [$@]
-		$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+		$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC)
+
+run:
+	./bin/main.exe
+	python3.9 main/ODEdmd.py
 
 clean:
 	@echo cleaning...

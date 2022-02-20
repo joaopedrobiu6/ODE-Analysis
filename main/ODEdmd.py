@@ -28,5 +28,58 @@ def read(file_path):
     return leitura
 
 
-leitura = read("data1.txt")
-print(leitura)
+def vectorize(file_path):
+    leitura = read(file_path)
+    time = []
+    pos = []
+    for i in range(0, len(leitura)):
+        time.append(float(leitura[i][0]))
+        pos.append(float(leitura[i][1]))
+    return time, pos
+
+
+t, x = vectorize("data1.txt")
+
+
+def makeplot(x, t):
+    plt.plot(t, x)
+    plt.title(
+        r"Solution for $\ddot{\theta} + [\delta + \varepsilon\cos{(t)}]\sin{(\theta)} = 0$"
+    )
+    plt.savefig("images/plot.png")
+
+
+# makeplot(x, t)
+
+xgrid, tgrid = np.meshgrid(x, t)
+
+dmd = DMD(svd_rank=2)
+dmd.fit(xgrid.T)
+
+for mode in dmd.modes.T:
+    print(mode.real)
+    plt.plot(x, mode.real)
+    plt.title("Modes")
+plt.savefig("images/modes.png")
+
+# for dynamic in dmd.dynamics:
+#    plt.plot(t, dynamic.real)
+#    plt.title("Dynamics")
+# plt.savefig("images/dynamics.png")
+
+# plt.plot(tgrid, xgrid)
+
+# plt.pcolor(xgrid, tgrid)
+# plt.colorbar()
+# plt.show()
+
+# for mode in dmd.modes.T:
+#   plt.plot(x, mode.real)
+#  plt.title("Modes")
+# plt.savefig("images/modes.png")
+
+
+# for dynamic in dmd.dynamics:
+#    plt.plot(t, dynamic.real)
+#    plt.title("Dynamics")
+# plt.savefig("images/dynamics.png")

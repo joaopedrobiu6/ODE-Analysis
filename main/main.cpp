@@ -11,14 +11,16 @@
 
 int main()
 {
-    srand(time(NULL));
+    /* srand(time(NULL));
     double f = (double)rand() / RAND_MAX;
 
     double epsilon = (double)(rand() % 100) / 100;
-    double delta = (double)(rand() % 100) / 100;
+    double delta = (double)(rand() % 100) / 100; */
+    double delta = 0.7;
+    double epsilon = 0.2;
     std::cout << "(" << delta << ", " << epsilon << ")" << std::endl;
 
-    double initial_position = M_PI / 2;
+    double initial_position = 0.1;
     ODE_analysis pendulum(2, {initial_position, 0});
 
     pendulum.SetFunction(0, [](ODEpoint p)
@@ -28,11 +30,11 @@ int main()
                          { return -((delta + epsilon * std::cos(p.T())) * std::sin((p.X())[0])); });
 
     std::vector<ODEpoint> result_euler = pendulum.EulerSolver(120, 0.0125);
-    std::vector<ODEpoint> result_RK4 = pendulum.RungeKutta4(120, 1E-3);
+    std::vector<ODEpoint> result_RK4 = pendulum.RungeKutta4(30, 1E-1);
     std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(120, 1E-3);
 
     // pendulum.ODE_Draw("images/euler.png", "time", "#hat{#theta}", 50, result_euler);
-    // pendulum.ODE_Draw("images/RK4.png", "time", "#hat{#theta}", 50, result_RK4);
+    pendulum.ODE_Draw("images/RK42.png", "time", "#hat{#theta}", 50, result_RK4);
     // pendulum.ODE_Draw("images/leapfrog.png", "time", "#hat{#theta}", 50, result_leapfrog);
     // pendulum.Draw_Stability("images/stability.pdf", 150, 0.0125);
 
