@@ -1,7 +1,7 @@
 #### definitions
 
 CXX := g++ -std=c++17
-CXXFLAGS := $(shell root-config --cflags) -fPIC
+CXXFLAGS := $(shell root-config --cflags) -fPIC 
 
 #### rules (target: dependencies -> actions)
 
@@ -23,16 +23,16 @@ lib: lib/libFC.a
 
 lib/%.a: $(OBJS)
 	@echo making lib...[$^]
-		ar ruv $@ $^
+		ar ruv $@ $^ 
 			ranlib $@
 
 bin/%.exe: bin/%.o lib/libFC.a
 	@echo executable... $< [$@]
-		$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC) -L lib -l FC $(ROOT_LIB)
+		$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l FC $(ROOT_LIB) 
 
 bin/%.o: %.cpp
 	@echo compiling... $< [$@]
-		$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC)
+		$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
 
 run:
 	./bin/main.exe

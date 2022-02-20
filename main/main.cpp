@@ -46,11 +46,16 @@ int main()
         exit(1);
     }
 
-    for (int i = 0; i < result_RK4.size(); ++i)
+    int n = (int)result_RK4.size();
+    for (int i = 0; i < n; ++i)
     {
         outdata << result_RK4[i].T() << ";" << result_RK4[i].X()[0] << std::endl;
     }
     outdata.close();
+
+    //Correr o ficheiro python para fazer o dynamic mode decomposition
+    std::cout << "\nA correr o código python..." << std::endl;
+    system("python3 main/ODEdmd.py");
 
     return 0;
 }
