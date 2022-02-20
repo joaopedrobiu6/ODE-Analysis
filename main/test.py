@@ -5,7 +5,7 @@ from pydmd import DMD
 
 
 def f1(x, t):
-    return 1.0 / np.cosh(x + 3) * np.exp(2.3j * t)
+    return 1.0 * np.exp(x*1j * t)
 
 
 def f2(x, t):
@@ -21,7 +21,8 @@ print(len(xgrid))
 
 X1 = f1(xgrid, tgrid)
 X2 = f2(xgrid, tgrid)
-X = X1 + X2
+X = X1
+print(X)
 
 titles = ["$f_1(x,t)$", "$f_2(x,t)$", "$f$"]
 data = [X1, X2, X]

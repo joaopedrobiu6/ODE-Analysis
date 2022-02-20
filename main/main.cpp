@@ -29,12 +29,12 @@ int main()
     pendulum.SetFunction(1, [&](ODEpoint p)
                          { return -((delta + epsilon * std::cos(p.T())) * std::sin((p.X())[0])); });
 
-    std::vector<ODEpoint> result_euler = pendulum.EulerSolver(120, 0.0125);
+    // std::vector<ODEpoint> result_euler = pendulum.EulerSolver(120, 0.0125);
     std::vector<ODEpoint> result_RK4 = pendulum.RungeKutta4(30, 1E-1);
-    std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(120, 1E-3);
+    // std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(120, 1E-3);
 
     // pendulum.ODE_Draw("images/euler.png", "time", "#hat{#theta}", 50, result_euler);
-    pendulum.ODE_Draw("images/RK42.png", "time", "#hat{#theta}", 50, result_RK4);
+    // pendulum.ODE_Draw("images/RK42.png", "time", "#hat{#theta}", 50, result_RK4);
     // pendulum.ODE_Draw("images/leapfrog.png", "time", "#hat{#theta}", 50, result_leapfrog);
     // pendulum.Draw_Stability("images/stability.pdf", 150, 0.0125);
 

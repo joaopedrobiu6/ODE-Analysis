@@ -1,6 +1,6 @@
 #### definitions
 
-CXX := g++ -std=c++11
+CXX := g++ -std=c++17
 CXXFLAGS := $(shell root-config --cflags) -fPIC
 
 #### rules (target: dependencies -> actions)
@@ -37,6 +37,10 @@ bin/%.o: %.cpp
 run:
 	./bin/main.exe
 	python3.9 main/ODEdmd.py
+
+py:
+	python3.9 main/ODEdmd.py
+
 
 clean:
 	@echo cleaning...

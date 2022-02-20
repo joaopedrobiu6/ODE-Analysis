@@ -1,3 +1,4 @@
+from fileinput import filename
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -49,18 +50,28 @@ def makeplot(x, t):
     plt.savefig("images/plot.png")
 
 
-# makeplot(x, t)
+makeplot(x, t)
 
 xgrid, tgrid = np.meshgrid(x, t)
 
 dmd = DMD(svd_rank=2)
 dmd.fit(xgrid.T)
 
-for mode in dmd.modes.T:
-    print(mode.real)
-    plt.plot(x, mode.real)
-    plt.title("Modes")
-plt.savefig("images/modes.png")
+for eig in dmd.eigs:
+    print(
+        "Eigenvalue {}: distance from unit circle {}".format(
+            eig, np.abs(np.sqrt(eig.imag ** 2 + eig.real ** 2) - 1)
+        )
+    )
+
+dmd.plot_eigs(show_axes=True, show_unit_circle=True, filename="images/eigs.pdf")
+
+print (dmd.eigs)
+# for mode in dmd.modes.T:
+#    print(mode.real)
+#    plt.plot(x, mode.real)
+#    plt.title("Modes")
+# plt.savefig("images/modes.png")
 
 # for dynamic in dmd.dynamics:
 #    plt.plot(t, dynamic.real)
