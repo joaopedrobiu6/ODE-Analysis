@@ -12,8 +12,8 @@
 
 int main()
 {
-    double delta = 0.7;
-    double epsilon = 0.2;
+    double delta = 0.32;
+    double epsilon = 0.24;
     std::cout << "(" << delta << ", " << epsilon << ")" << std::endl;
 
     double initial_position = 0.1;
@@ -25,7 +25,7 @@ int main()
     pendulum.SetFunction(1, [&](ODEpoint p)
                          { return -((delta + epsilon * std::cos(p.T())) * std::sin((p.X())[0])); });
 
-    std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(30, 1E-1);
+    std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(200, 1e-1);
 
     WriteData("data1.txt",result_leapfrog);
 

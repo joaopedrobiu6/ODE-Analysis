@@ -25,7 +25,7 @@ void WriteData(const char *filename, std::vector<ODEpoint> P)
     int n = (int)P.size();
     for (int i = 0; i < n; ++i)
     {
-        outdata << P[i].T() << ";" << P[i].X()[0] << std::endl;
+        outdata << P[i].T() << "," << P[i].X()[0] <<  std::endl;
     }
     outdata.close();
 };
