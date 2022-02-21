@@ -38,32 +38,30 @@ def vectorize(file_path):
         pos.append(float(leitura[i][1]))
     return time, pos
 
-def makeplot(x, t):
+def makeplot(x, t,name):
     plt.plot(t, x)
-    plt.title(r"Solution for $\ddot{\theta} + [\delta + \varepsilon\cos{(t)}]\sin{(\theta)} = 0$")
-    plt.savefig("images/plot.png")
-    print("\nPlot png has been generated\n")
+    plt.title("Solution for $\ddot{\theta} + [\delta + \varepsilon\cos{(t)}]\sin{(\theta)} = 0$")
+    plt.savefig(name)
+    print("\n" + name + " has been generated\n")
 
 def main():
     t, x = vectorize("data1.txt")
 
-    makeplot(x,t)
+    makeplot(x,t,"plot.png")
 
     xgrid, tgrid = np.meshgrid(x, t)
 
     dmd = DMD(svd_rank=2)
     dmd.fit(xgrid.T)
 
+    print ("\nEigenValues: " + str(dmd.eigs))
+
     for eig in dmd.eigs:
-        print(
-            "Eigenvalue {}: distance from unit circle {}".format(
-                eig, np.abs(np.sqrt(eig.imag ** 2 + eig.real ** 2) - 1)
-            )
-        )
+        print("\nEigenvalue " + str(eig) + ": distance from unit circle " +  str(np.abs(np.sqrt(eig.imag ** 2 + eig.real ** 2) - 1)))
+        print("Parte Real: " + str(eig.real) + " Parte Imaginaria: " + str(eig.imag))
 
-    dmd.plot_eigs(show_axes=True, show_unit_circle=True, filename="images/eigs.pdf")
+    dmd.plot_eigs(show_axes=True, show_unit_circle=True, filename="images/eigs.png")
 
-    print (dmd.eigs)
     # for mode in dmd.modes.T:
     #    print(mode.real)
     #    plt.plot(x, mode.real)
