@@ -12,8 +12,9 @@
 
 int main()
 {
-    double delta = 4;
-    double epsilon = 25;
+    srand(time(NULL));
+    double delta = (double)(rand() % 100) / 10;
+    double epsilon = (double)(rand() % 100) / 10;
     std::cout << "(" << delta << ", " << epsilon << ")" << std::endl;
 
     double initial_position = 0.1;
@@ -27,9 +28,9 @@ int main()
 
     std::vector<ODEpoint> result_leapfrog = pendulum.LeapFrogImprovedSolver(120, 1e-1);
 
-    WriteData("data1.txt",result_leapfrog);
+    WriteData("data1.txt", result_leapfrog);
 
-    //Correr o ficheiro python para fazer o dynamic mode decomposition
+    // Correr o ficheiro python para fazer o dynamic mode decomposition
     std::cout << "\nA correr o código python..." << std::endl;
     system("python3 main/ODEdmd.py");
 

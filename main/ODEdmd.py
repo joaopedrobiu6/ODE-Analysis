@@ -93,10 +93,6 @@ def dmd_reconstruction(dataframe):
 
 
 def main():
-    # t, x = vectorize("data1.txt")
-
-    # makeplot(x,t,"images/plot.png")
-
     # Baseado Nisto https://github.com/IvanPMorenoMarcos/DMD-HODM-for-UTSF/blob/main/hodmd.ipynb
     dataframe = pd.read_csv(
         "../ODE-Analysis/data1.txt", index_col=0, header=None, squeeze=True
@@ -108,38 +104,6 @@ def main():
 
     # Quando a solução é estavel a reconstrução funciona bem, quando não é estável mais ou menos
     dmd_reconstruction(dataframe)
-
-    """
-    xgrid, tgrid = np.meshgrid(x, t)
-    dmd = DMD(svd_rank=2)
-    dmd.fit(xgrid.T)
-    print ("\nEigenValues: " + str(dmd.eigs))
-    for eig in dmd.eigs:
-        print("\nEigenvalue " + str(eig) + ": distance from unit circle " +  str(np.abs(np.sqrt(eig.imag ** 2 + eig.real ** 2) - 1)))
-        print("Parte Real: " + str(eig.real) + " Parte Imaginaria: " + str(eig.imag))
-    dmd.plot_eigs(show_axes=True, show_unit_circle=True, filename="images/eigs.png")
-    for mode in dmd.modes.T:
-        print(mode.real)
-        plt.plot(x, mode.real)
-        plt.title("Modes")
-        plt.savefig("images/modes.png")
-    # for dynamic in dmd.dynamics:
-    #    plt.plot(t, dynamic.real)
-    #    plt.title("Dynamics")
-    # plt.savefig("images/dynamics.png")
-    # plt.plot(tgrid, xgrid)
-    # plt.pcolor(xgrid, tgrid)
-    # plt.colorbar()
-    # plt.show()
-    # for mode in dmd.modes.T:
-    #   plt.plot(x, mode.real)
-    #  plt.title("Modes")
-    # plt.savefig("images/modes.png")
-    # for dynamic in dmd.dynamics:
-    #    plt.plot(t, dynamic.real)
-    #    plt.title("Dynamics")
-    # plt.savefig("images/dynamics.png")
-    """
 
 
 main()
