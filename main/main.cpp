@@ -12,8 +12,8 @@
 
 int main()
 {
-    double delta = 0.36;
-    double epsilon = 0.25;
+    double delta = 4;
+    double epsilon = 25;
     std::cout << "(" << delta << ", " << epsilon << ")" << std::endl;
 
     double initial_position = 0.1;

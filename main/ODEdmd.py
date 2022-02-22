@@ -5,7 +5,8 @@ import numpy as np
 from pydmd import DMD
 from pydmd import HODMD
 
-import pandas as pd  
+import pandas as pd
+
 
 def check_float(potential_float):
     try:
@@ -40,55 +41,75 @@ def vectorize(file_path):
         pos.append(float(leitura[i][1]))
     return time, pos
 
-def makeplot(x, t,name):
+
+def makeplot(x, t, name):
     plt.plot(t, x)
-    plt.title(r"Solution for $\ddot{\theta} + [\delta + \varepsilon\cos{(t)}]\sin{(\theta)} = 0$")
+    plt.title(
+        r"Solution for $\ddot{\theta} + [\delta + \varepsilon\cos{(t)}]\sin{(\theta)} = 0$"
+    )
     plt.savefig(name)
     print("\n" + name + " has been generated\n")
+
 
 def dmd_reconstruction(dataframe):
     print(dataframe)
     # create and fit a HODMD model
-    hodmd = HODMD(svd_rank=0,
-            opt=True,
-            exact=True,
-            rescale_mode=None,
-            forward_backward=False,
-            sorted_eigs='abs',
-            tlsq_rank=0,d=700)
+    hodmd = HODMD(
+        svd_rank=0,
+        opt=True,
+        exact=True,
+        rescale_mode=None,
+        forward_backward=False,
+        sorted_eigs="abs",
+        tlsq_rank=0,
+        d=700,
+    )
 
     hodmd.fit(dataframe.values)
+
+    hodmd.plot_eigs(
+        show_axes=True,
+        show_unit_circle=True,
+        title="Eigenvalues",
+        filename="images/eigs.png",
+    )
+    plt.clf()
 
     print("\nEIGENVALUES: (Ordenados por Magnitude)\n")
     print(hodmd.eigs)
 
     # plot predictions vs actuals on training dataset
-    plt.plot(dataframe.values,'.', label = 'Data' , color = 'black', markersize = 3)
-    plt.plot(hodmd.reconstructed_data[0].real,label = 'Reconstruction', color = "red")
+    plt.plot(dataframe.values, ".", label="Data", color="black", markersize=3)
+    plt.plot(hodmd.reconstructed_data[0].real, label="Reconstruction", color="red")
     plt.legend()
     plt.title("DMD Reconstruction", fontsize=12)
     plt.xlabel(r"${t}$", fontsize=12)
     plt.ylabel(r"${\theta}$", fontsize=12)
     plt.savefig("images/reconstruction.png")
 
-    print("\nFoi criado um plot (images/reconstruction.png) com a reconstrução do sinal pelo DMD\n")
+    print(
+        "\nFoi criado um plot (images/reconstruction.png) com a reconstrução do sinal pelo DMD\n"
+    )
+
 
 def main():
-    #t, x = vectorize("data1.txt")
+    # t, x = vectorize("data1.txt")
 
-    #makeplot(x,t,"images/plot.png")
+    # makeplot(x,t,"images/plot.png")
 
-    #Baseado Nisto https://github.com/IvanPMorenoMarcos/DMD-HODM-for-UTSF/blob/main/hodmd.ipynb
-    dataframe = pd.read_csv('../ODE-Analysis/data1.txt', index_col=0, header=None, squeeze=True)
+    # Baseado Nisto https://github.com/IvanPMorenoMarcos/DMD-HODM-for-UTSF/blob/main/hodmd.ipynb
+    dataframe = pd.read_csv(
+        "../ODE-Analysis/data1.txt", index_col=0, header=None, squeeze=True
+    )
 
     dataframe.plot()
     plt.savefig("images/dataplot.png")
     plt.clf()
 
-    #Quando a solução é estavel a reconstrução funciona bem, quando não é estável mais ou menos
+    # Quando a solução é estavel a reconstrução funciona bem, quando não é estável mais ou menos
     dmd_reconstruction(dataframe)
 
-    '''
+    """
     xgrid, tgrid = np.meshgrid(x, t)
     dmd = DMD(svd_rank=2)
     dmd.fit(xgrid.T)
@@ -118,5 +139,7 @@ def main():
     #    plt.plot(t, dynamic.real)
     #    plt.title("Dynamics")
     # plt.savefig("images/dynamics.png")
-    '''
+    """
+
+
 main()
