@@ -90,44 +90,33 @@ def main():
 
     '''
     xgrid, tgrid = np.meshgrid(x, t)
-
     dmd = DMD(svd_rank=2)
     dmd.fit(xgrid.T)
-
     print ("\nEigenValues: " + str(dmd.eigs))
-
     for eig in dmd.eigs:
         print("\nEigenvalue " + str(eig) + ": distance from unit circle " +  str(np.abs(np.sqrt(eig.imag ** 2 + eig.real ** 2) - 1)))
         print("Parte Real: " + str(eig.real) + " Parte Imaginaria: " + str(eig.imag))
-
     dmd.plot_eigs(show_axes=True, show_unit_circle=True, filename="images/eigs.png")
-
     for mode in dmd.modes.T:
         print(mode.real)
         plt.plot(x, mode.real)
         plt.title("Modes")
         plt.savefig("images/modes.png")
-
     # for dynamic in dmd.dynamics:
     #    plt.plot(t, dynamic.real)
     #    plt.title("Dynamics")
     # plt.savefig("images/dynamics.png")
-
     # plt.plot(tgrid, xgrid)
-
     # plt.pcolor(xgrid, tgrid)
     # plt.colorbar()
     # plt.show()
-
     # for mode in dmd.modes.T:
     #   plt.plot(x, mode.real)
     #  plt.title("Modes")
     # plt.savefig("images/modes.png")
-
     # for dynamic in dmd.dynamics:
     #    plt.plot(t, dynamic.real)
     #    plt.title("Dynamics")
     # plt.savefig("images/dynamics.png")
-
     '''
 main()

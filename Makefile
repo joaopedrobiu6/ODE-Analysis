@@ -23,20 +23,19 @@ lib: lib/libFC.a
 
 lib/%.a: $(OBJS)
 	@echo making lib...[$^]
-		ar ruv $@ $^ 
-			ranlib $@
+	ar ruv $@ $^ 
+	ranlib $@
 
 bin/%.exe: bin/%.o lib/libFC.a
 	@echo executable... $< [$@]
-		$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l FC $(ROOT_LIB) 
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l FC $(ROOT_LIB) 
 
 bin/%.o: %.cpp
 	@echo compiling... $< [$@]
-		$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
 
 run:
 	./bin/main.exe
-	python3.9 main/ODEdmd.py
 
 py:
 	python3.9 main/ODEdmd.py
@@ -44,7 +43,11 @@ py:
 
 clean:
 	@echo cleaning...
-	      rm -f $(wildcard bin/*) $(wildcard lib/*)
+	rm -f $(wildcard bin/*) $(wildcard lib/*)
+
+clean_images:
+	@echo cleaning...
+	rm -f $(wildcard images/*.png)
 
 dump:
 	@echo SRCS...[$(SRCS)] [$(OBJS)] [$(EXES)]
