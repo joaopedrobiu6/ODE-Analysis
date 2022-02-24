@@ -10,6 +10,8 @@
 #include "ODE_analysis.h"
 #include "tools.h"
 
+//ainda nao esta a funcionar :(
+
 int main()
 {
     double initial_position = 0.1;
@@ -29,7 +31,7 @@ int main()
     { // file couldn't be openedcsv
         std::cerr << "Error: file could not be opened" << std::endl;
         exit(1);
-    }
+    } 
 
     for (int i = 0; i < 10; i++)
     {
