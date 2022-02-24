@@ -45,7 +45,9 @@ int main()
 
             for (int i = 0; i < n; ++i)
             {
-                outdata << result_leapfrog[i].X()[0] << ";";
+                outdata << result_leapfrog[i].X()[0];
+                if (i != n - 1)
+                    outdata << ";";
             }
             outdata << std::endl;
             epsilon = epsilon + 0.1;
@@ -58,7 +60,7 @@ int main()
 
     // Correr o ficheiro python para fazer o dynamic mode decomposition
     std::cout << "\nA correr o código python..." << std::endl;
-    // system("python3 main/ODEdmd.py");
+    system("python3 main/ODEdmd.py");
 
     return 0;
 }

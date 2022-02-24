@@ -52,7 +52,7 @@ def makeplot(x, t, name):
 
 
 def dmd_reconstruction(dataframe):
-    print(dataframe)
+    # print(dataframe)
     # create and fit a HODMD model
     hodmd = HODMD(
         svd_rank=0,
@@ -86,24 +86,45 @@ def dmd_reconstruction(dataframe):
     plt.xlabel(r"${t}$", fontsize=12)
     plt.ylabel(r"${\theta}$", fontsize=12)
     plt.savefig("images/reconstruction.png")
-
     print(
         "\nFoi criado um plot (images/reconstruction.png) com a reconstrução do sinal pelo DMD\n"
     )
 
 
+def GetEigs(dataframe):
+    eigs = []
+    for i in range(0, 100):
+        hodmd = HODMD(
+            svd_rank=0,
+            opt=True,
+            exact=True,
+            rescale_mode=None,
+            forward_backward=False,
+            sorted_eigs="abs",
+            tlsq_rank=0,
+            d=700,
+        )
+
+        hodmd.fit(dataframe.values[i])
+
+        eigs.append(hodmd.eigs[0])
+
+    return eigs
+
+
 def main():
     # Baseado Nisto https://github.com/IvanPMorenoMarcos/DMD-HODM-for-UTSF/blob/main/hodmd.ipynb
     dataframe = pd.read_csv(
-        "../ODE-Analysis/data1.txt", index_col=0, header=None, squeeze=True
+        "../ODE-Analysis/data.csv", index_col=False, header=None, squeeze=True, sep=";"
     )
 
-    dataframe.plot()
-    plt.savefig("images/dataplot.png")
-    plt.clf()
+    eigs = GetEigs(dataframe)
+    # selecior a linha 1:
+    # print(dataframe.iloc[1, 0:150])
+    # plt.savefig("images/dataplot.png")
+    # plt.clf()
 
     # Quando a solução é estavel a reconstrução funciona bem, quando não é estável mais ou menos
-    dmd_reconstruction(dataframe)
 
 
 main()
