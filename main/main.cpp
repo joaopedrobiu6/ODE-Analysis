@@ -10,7 +10,7 @@
 #include "ODE_analysis.h"
 #include "tools.h"
 
-//ainda nao esta a funcionar :(
+// ainda nao esta a funcionar :(
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
     { // file couldn't be openedcsv
         std::cerr << "Error: file could not be opened" << std::endl;
         exit(1);
-    } 
+    }
 
     for (int i = 0; i < 10; i++)
     {
@@ -54,7 +54,6 @@ int main()
             outdata << std::endl;
             epsilon = epsilon + 0.1;
         }
-
         delta = delta + 0.1;
     }
 
