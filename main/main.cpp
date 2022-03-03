@@ -10,6 +10,8 @@
 #include "ODE_analysis.h"
 #include "tools.h"
 
+// ainda nao esta a funcionar :(
+
 int main()
 {
     double initial_position = 0.1;
@@ -52,7 +54,6 @@ int main()
             outdata << std::endl;
             epsilon = epsilon + 0.1;
         }
-
         delta = delta + 0.1;
     }
 
