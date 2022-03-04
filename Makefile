@@ -19,16 +19,16 @@ VPATH = main:src
 
 all: $(EXES)
 
-lib: lib/libFC.a
+lib: lib/libBIU.a
 
 lib/%.a: $(OBJS)
 	@echo making lib...[$^]
 	ar ruv $@ $^ 
 	ranlib $@
 
-bin/%.exe: bin/%.o lib/libFC.a
+bin/%.exe: bin/%.o lib/libBIU.a
 	@echo executable... $< [$@]
-	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l FC $(ROOT_LIB) 
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l BIU $(ROOT_LIB) 
 
 bin/%.o: %.cpp
 	@echo compiling... $< [$@]

@@ -93,41 +93,52 @@ const std::vector<ODEpoint> &ODE_analysis::RungeKutta4(double Time, double step)
         resultado[i + 1].T() = resultado[i].T() + step;
 
         // Cálculo dos K1
-        K1[0] = f[0](resultado[i]);
-        K1[1] = f[1](resultado[i]);
-
-        xvar_temp.X()[0] = resultado[i].X()[0] + (0.5 * step * K1[0]);
-        xvar_temp.X()[1] = resultado[i].X()[1] + (0.5 * step * K1[1]);
+        for (int j = 0; j < n1; j++)
+        {
+            K1[j] = f[j](resultado[i]);
+        }
+        // K1[1] = f[1](resultado[i]);
+        for (int j = 0; j < n1; j++)
+        {
+            xvar_temp.X()[j] = resultado[i].X()[j] + (0.5 * step * K1[j]);
+        }
+        // xvar_temp.X()[1] = resultado[i].X()[1] + (0.5 * step * K1[1]);
         tempo = resultado[i].T() + (step * 0.5);
 
         p0.SetODEpoint(tempo, xvar_temp);
 
         // Cálculo dos K2
-        K2[0] = f[0](p0);
-        K2[1] = f[1](p0);
+        for (int j = 0; j < n1; j++)
+            K2[j] = f[j](p0);
+        // K2[1] = f[1](p0);
 
-        xvar_temp.X()[0] = resultado[i].X()[0] + (0.5 * step * K2[0]);
-        xvar_temp.X()[1] = resultado[i].X()[1] + (0.5 * step * K2[1]);
+        for (int j = 0; j < n1; j++)
+            xvar_temp.X()[j] = resultado[i].X()[j] + (0.5 * step * K2[j]);
+        // xvar_temp.X()[1] = resultado[i].X()[1] + (0.5 * step * K2[1]);
 
         p0.SetODEpoint(tempo, xvar_temp);
 
         // Cálculo dos K3
-        K3[0] = f[0](p0);
-        K3[1] = f[1](p0);
+        for (int j = 0; j < n1; j++)
+            K3[j] = f[j](p0);
+        // K3[1] = f[1](p0);
 
         // Cálculo dos K4
-        xvar_temp.X()[0] = resultado[i].X()[0] + (step * K3[0]);
-        xvar_temp.X()[1] = resultado[i].X()[1] + (step * K3[1]);
+        for (int j = 0; j < n1; j++)
+            xvar_temp.X()[j] = resultado[i].X()[j] + (step * K3[j]);
+        // xvar_temp.X()[1] = resultado[i].X()[1] + (step * K3[1]);
         tempo = resultado[i].T() + (step);
 
         p0.SetODEpoint(tempo, xvar_temp);
 
-        K4[0] = f[0](p0);
-        K4[1] = f[1](p0);
+        for (int j = 0; j < n1; j++)
+            K4[j] = f[j](p0);
+        // K4[1] = f[1](p0);
 
         // Cálculo das soluções
-        resultado[i + 1].X()[0] = resultado[i].X()[0] + step * (K1[0] + 2 * K2[0] + 2 * K3[0] + K4[0]) / 6;
-        resultado[i + 1].X()[1] = resultado[i].X()[1] + step * (K1[1] + 2 * K2[1] + 2 * K3[1] + K4[1]) / 6;
+        for (int j = 0; j < n1; j++)
+            resultado[i + 1].X()[j] = resultado[i].X()[j] + step * (K1[j] + 2 * K2[j] + 2 * K3[j] + K4[j]) / 6;
+        // resultado[i + 1].X()[1] = resultado[i].X()[1] + step * (K1[1] + 2 * K2[1] + 2 * K3[1] + K4[1]) / 6;
 
         K1.clear();
         K2.clear();
