@@ -1,6 +1,8 @@
 # ODE-Analysis
 Set of C++ tools to solve EDO's using numerical methods - Euler's Method, LeapFrog method and Runge-Kutta method (RK4).
 
+![alt text](https://github.com/MiguelLameiras/Perlin-Noise/blob/master/bin/data/5_Layers.png)
+
 In `src/` you can also find other classes with other tools: Numerical integration (Simpson's Rule, Monte Carlo Methods, Trapezoidal Rule), numerical differentiation, interpolation methods (Spline 3), Root-Finder, Gauss-Elimination and linear equations system solver, etc.
 
 Requires CERN's ROOT library (https://root.cern/) and Eigen Library (https://eigen.tuxfamily.org/index.php?title=Main_Page). 
