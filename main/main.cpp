@@ -20,7 +20,7 @@ void Stability_Map(int, double); // Gerar n ODE's, só quero testar umas coisas
 int main()
 {
     // Uma_Ode();
-    Stability_Map(300,0.1);
+    Stability_Map(200,0.1);
 
     return 0;
 }
@@ -130,7 +130,7 @@ void Stability_Map(int numero, double step)
     
     //Max and min delta values
     double delta_range[2] = {0.2, 0.35};
-    double epsilon_range[2] = {0, 0.25};
+    double epsilon_range[2] = {0.075, 0.25};
 
     double step_delta = (delta_range[1] - delta_range[0]) / numero;
     double step_epsilon = (epsilon_range[1] - epsilon_range[0]) / numero;
