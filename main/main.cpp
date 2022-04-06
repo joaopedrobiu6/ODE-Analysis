@@ -20,7 +20,7 @@ void Stability_Map(int, double); // Gerar n ODE's, só quero testar umas coisas
 int main()
 {
     // Uma_Ode();
-    Stability_Map(200,0.1);
+    Stability_Map(300,0.1);
 
     return 0;
 }
