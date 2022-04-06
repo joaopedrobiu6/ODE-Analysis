@@ -1,11 +1,11 @@
 # ODE-Analysis
 Set of C++ tools to solve EDO's using numerical methods - Euler's Method, LeapFrog method and Runge-Kutta method (RK4).
 
-## Plot da posição do pêndulo passado x tempo:
+Plot da posição do pêndulo passado x tempo:
 
 ![alt text](https://github.com/joaopedrobiu6/ODE-Analysis/blob/main/images/Diagram_2.png)
 
-## Critério de Estabilidade usado no projeto:
+Critério de Estabilidade usado no projeto:
 
 ![alt text](https://github.com/joaopedrobiu6/ODE-Analysis/blob/main/images/Diagram.png)
 
