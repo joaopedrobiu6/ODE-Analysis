@@ -25,8 +25,8 @@ for line in file:
     z.append(float(row[2]))
 
 # make a new color map:
-cmp = ListedColormap(['deeppink','midnightblue'])
-plt.scatter(x, y,c=z,s=0.5, cmap=cmp)
+#cmp = ListedColormap(['deeppink','midnightblue'])
+plt.scatter(x, y,c=z,s=0.5, cmap='magma')
 
 plt.title("Stability Diagram", fontsize=18)
 plt.xlabel("$\delta$", fontsize=18)
@@ -53,6 +53,6 @@ cbar.outline.set_edgecolor("#eff6fc")
 plt.setp(plt.getp(cbar.ax.axes, 'yticklabels'), color="#eff6fc")
 
 
-plt.savefig("images/Diagram.png", dpi = 300)
+plt.savefig("images/Diagram_2.png", dpi = 300)
 
 print("\u001b[32mThe Histogram has been generated inside the images folder")

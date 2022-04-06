@@ -25,6 +25,7 @@ int main()
     return 0;
 }
 
+//Criterio de estabilidade do projeto
 int Is_Stable(double *media, int n)
 {
     int flag_estab = 1;
@@ -149,7 +150,8 @@ void Stability_Map(int numero, double step)
 
     for (double delta = delta_range[0]; delta <= delta_range[1]; delta = delta + step_delta)
     {
-        for (double epsilon = epsilon_range[0]; epsilon <= epsilon_range[1] + step_epsilon; epsilon = epsilon + step_epsilon)
+        //Adicionei loop unrolling aqui, daí andar de 2 em 2 
+        for (double epsilon = epsilon_range[0]; epsilon <= epsilon_range[1] + step_epsilon; epsilon = epsilon + 2*step_epsilon)
         {
             pendulum_parametric pendulum(1, {0.1, 0});
             pendulum.SetFunction(0, [](ODEpoint p)
@@ -165,13 +167,14 @@ void Stability_Map(int numero, double step)
 
             double *media = &mov_avg[0];
 
-            int value = Is_Stable(media, n);
+            /*int value = Is_Stable(media, n);
             if (value == 0)
                 est = 0.1;
             else
-                est = 1;
+                est = 1;*/
 
-            outdata << delta << ";" << epsilon << ";" << est << std::endl;
+            outdata << delta << ";" << epsilon << ";" << media[n-1] << std::endl;
+
         }
         count++;
         if (count % 5 == 0)
