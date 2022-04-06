@@ -1,7 +1,11 @@
 # ODE-Analysis
 Set of C++ tools to solve EDO's using numerical methods - Euler's Method, LeapFrog method and Runge-Kutta method (RK4).
 
-##Critério de Estabilidade usado no projeto:
+Moving Average of pendulum position after t time:
+
+![alt text](https://github.com/joaopedrobiu6/ODE-Analysis/blob/main/images/Diagram_2.png)
+
+Stability Criteria used in FC's project:
 
 ![alt text](https://github.com/joaopedrobiu6/ODE-Analysis/blob/main/images/Diagram.png)
 
