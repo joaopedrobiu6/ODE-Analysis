@@ -10,6 +10,19 @@
 #include "ODE_analysis.h"
 #include "tools.h"
 #include "pendulum_parametric.h"
+
+#include <iostream>
+#include <vector>
+#include <functional>
+#include <map>
+#include <cmath>
+#include <time.h>
+#include <fstream>
+#include <cstdlib>
+
+#include "ODE_analysis.h"
+#include "tools.h"
+#include "pendulum_parametric.h"
 // ainda nao esta a funcionar :(
 
 void Uma_Ode(); // Função para gerar uma só ode e guardar o output num ficheiro txt
@@ -20,7 +33,7 @@ void Stability_Map(int, double); // Gerar n ODE's, só quero testar umas coisas
 int main()
 {
     // Uma_Ode();
-    Stability_Map(300, 0.1);
+    Stability_Map(20, 0.1);
 
     return 0;
 }
@@ -163,17 +176,17 @@ void Stability_Map(int numero, double step)
             std::vector<ODEpoint> resultado = pendulum.LeapFrogImprovedSolver(numero, step);
             std::vector<double> mov_avg = Moving_Average(resultado, step, 5 / step);
 
-            n = mov_avg.size();
+            n = resultado.size();
 
             double *media = &mov_avg[0];
 
-            /*int value = Is_Stable(media, n);
-            if (value == 0)
-                est = 0.1;
-            else
-                est = 1;*/
-
-            outdata << delta << ";" << epsilon << ";" << media[n - 1] << std::endl;
+            for (int i = 0; i < n; ++i)
+            {
+                outdata << resultado[i].X()[0];
+                if (i != n - 1)
+                    outdata << ";";
+            }
+            outdata << std::endl;
         }
         count++;
         if (count % 5 == 0)
@@ -184,6 +197,6 @@ void Stability_Map(int numero, double step)
     outdata.close();
 
     // Correr o ficheiro python para fazer o dynamic mode decomposition
-    std::cout << "\n\u001b[37mA correr o código python..." << std::endl;
-    system("python3 main/Hist.py");
+    /* std::cout << "\n\u001b[37mA correr o código python..." << std::endl;
+    system("python3 main/Hist.py"); */
 }

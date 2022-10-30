@@ -1,0 +1,977 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sun Oct 30 19:52:49 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+ 
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# environment
+CMAKE_PREFIX_PATH = /home/joaobiu/root
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+JUPYTER_PATH = /home/joaobiu/root/etc/notebook
+# makefile (from 'Makefile', line 18)
+VPATH = main:src
+# environment
+VSCODE_CWD = /home/joaobiu
+# environment
+JUPYTER_CONFIG_DIR = /home/joaobiu/root/etc/notebook
+# environment
+WINDOWPATH = 2
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/111/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# environment
+ROOTSYS = /home/joaobiu/root
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/joaobiu/ODE-Analysis
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/joaobiu/.config/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GNOME_TERMINAL_SERVICE = :1.101
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/joaobiu/ODE-Analysis
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'Makefile', line 8)
+SRCS := src/DataPoints.cpp src/DataReader.cpp src/EqSolver.cpp src/FCmatrixAlgo.cpp src/Fitter.cpp src/FourierDT.cpp src/Functor.cpp src/Functor3D.cpp src/IntegDeriv.cpp src/IntegDeriv3D.cpp src/Interpolator.cpp src/Material.cpp src/MonteCarlo.cpp src/MyFunction.cpp src/MyFunction3D.cpp src/ODE_analysis.cpp src/ODEpoint.cpp src/ODEsolver.cpp src/OpticalMat.cpp src/RootCalculator.cpp src/Rwalk1D.cpp src/functions.cpp src/lightmap.cpp src/pendulum.cpp src/pendulum_parametric.cpp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu-xorg:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = ubuntu-xorg
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+SNAP_REEXEC = 
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 12)
+ROOT_LIB := -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic
+# environment
+VSCODE_PID = 5678
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+DYLD_LIBRARY_PATH = /home/joaobiu/root/lib
+# makefile (from 'Makefile', line 11)
+ROOT_INC := -I /home/joaobiu/root/include
+# environment
+SESSION_MANAGER = local/joaobiu-IdeaPad-5-15ARE05:@/tmp/.ICE-unix/1904,unix/joaobiu-IdeaPad-5-15ARE05:/tmp/.ICE-unix/1904
+# automatic
+*F = $(notdir $*)
+# environment
+MANPATH = /home/joaobiu/root/man:/home/joaobiu/.local/share/man:/usr/local/man:/usr/local/share/man:/usr/share/man
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+LIBPATH = /home/joaobiu/root/lib
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"pt-br","availableLanguages":{},"_languagePackSupport":true}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 9)
+OBJS :=  bin/DataPoints.o  bin/DataReader.o  bin/EqSolver.o  bin/FCmatrixAlgo.o  bin/Fitter.o  bin/FourierDT.o  bin/Functor.o  bin/Functor3D.o  bin/IntegDeriv.o  bin/IntegDeriv3D.o  bin/Interpolator.o  bin/Material.o  bin/MonteCarlo.o  bin/MyFunction.o  bin/MyFunction3D.o  bin/ODE_analysis.o  bin/ODEpoint.o  bin/ODEsolver.o  bin/OpticalMat.o  bin/RootCalculator.o  bin/Rwalk1D.o  bin/functions.o  bin/lightmap.o  bin/pendulum.o  bin/pendulum_parametric.o
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+LD_LIBRARY_PATH = /home/joaobiu/root/lib
+# environment
+SHLVL = 1
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/792d6300_c166_4064_a2fc_c7833fb02658
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+CLING_STANDARD_PCH = none
+# environment
+SNAP_COOKIE = 0zJzSDLUayawyk5YNzaGgI0tteaD1knKEIdio7wpWrb3ZxtZoRGS
+# environment
+PATH = /home/joaobiu/root/bin:/home/joaobiu/.local/bin:/home/joaobiu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = pt:pt_BR:en
+# automatic
+^F = $(notdir $^)
+# environment
+SNAP_USER_COMMON = /home/joaobiu/snap/code/common
+# environment
+SNAP = /snap/code/111
+# environment
+SNAP_REVISION = 111
+# environment
+SNAP_REAL_HOME = /home/joaobiu
+# environment
+USERNAME = joaobiu
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# automatic
+?F = $(notdir $?)
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
++F = $(notdir $+)
+# environment
+DESKTOP_SESSION = ubuntu-xorg
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = joaobiu
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 10)
+EXES :=  bin/main.exe  bin/main2.exe  bin/pend_fourier.exe  bin/tFitter.exe
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 1923
+# environment
+DISPLAY = :0
+# environment
+USER = joaobiu
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+SNAP_DATA = /var/snap/code/111
+# environment
+SNAP_CONTEXT = 0zJzSDLUayawyk5YNzaGgI0tteaD1knKEIdio7wpWrb3ZxtZoRGS
+# environment
+PYTHONPATH = /home/joaobiu/root/lib
+# makefile (from 'Makefile', line 13)
+EIGEN_INC := -I /usr/include/eigen3
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+COLORTERM = truecolor
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/joaobiu/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/joaobiu
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-f8712f32-1.72.2-main.sock
+# environment
+TERM = xterm-256color
+# environment
+SNAP_NAME = code
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/111/usr/share/glib-2.0/schemas
+# environment
+IM_CONFIG_PHASE = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# environment
+SNAP_VERSION = d045a5ed
+# default
+SUFFIXES := 
+# environment
+SHLIB_PATH = /home/joaobiu/root/lib
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VTE_VERSION = 6800
+# environment
+SNAP_COMMON = /var/snap/code/common
+# makefile (from 'Makefile', line 4)
+CXXFLAGS := -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 3)
+CXX := g++ -std=c++17
+# environment
+SNAP_USER_DATA = /home/joaobiu/snap/code/111
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = ubuntu-xorg
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# variable set hash-table stats:
+# Load=133/1024=13%, Rehash=0, Collisions=15/178=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# main/bin: could not be stat'd.
+# src/bin: could not be stat'd.
+# src (device 66309, inode 5119441): 54 files, no impossibilities.
+# . (device 66309, inode 5119348): 12 files, no impossibilities.
+# main (device 66309, inode 5119433): 10 files, no impossibilities.
+ 
+# bin (device 66309, inode 5119394): 31 files, no impossibilities.
+# lib (device 66309, inode 5119431): No files, no impossibilities so far.
+
+# 107 files, no impossibilities in 7 directories.
+
+# Implicit Rules
+
+lib/%.a: bin/DataPoints.o bin/DataReader.o bin/EqSolver.o bin/FCmatrixAlgo.o bin/Fitter.o bin/FourierDT.o bin/Functor.o bin/Functor3D.o bin/IntegDeriv.o bin/IntegDeriv3D.o bin/Interpolator.o bin/Material.o bin/MonteCarlo.o bin/MyFunction.o bin/MyFunction3D.o bin/ODE_analysis.o bin/ODEpoint.o bin/ODEsolver.o bin/OpticalMat.o bin/RootCalculator.o bin/Rwalk1D.o bin/functions.o bin/lightmap.o bin/pendulum.o bin/pendulum_parametric.o
+#  recipe to execute (from 'Makefile', line 25):
+	@echo making lib...[$^]
+	ar ruv $@ $^ 
+	ranlib $@
+
+bin/%.exe: bin/%.o lib/libBIU.a
+#  recipe to execute (from 'Makefile', line 30):
+	@echo executable... $< [$@]
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l BIU $(ROOT_LIB) 
+
+bin/%.o: %.cpp
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# 3 implicit rules, 0 (0.0%) terminal.
+# Files
+
+bin/Functor.o: src/Functor.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Functor'
+#  Last modified 2022-08-01 22:14:18.392851454
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/main2.o: main/main2.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main2'
+#  File is an intermediate prerequisite.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+src/pendulum_parametric.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.25051332
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/Interpolator.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/main.o: main/main.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  File is an intermediate prerequisite.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/IntegDeriv.o: src/IntegDeriv.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'IntegDeriv'
+#  Last modified 2022-08-01 22:14:20.144897495
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+src/DataPoints.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+dump:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 53):
+	@echo SRCS...[$(SRCS)] [$(OBJS)] [$(EXES)]
+
+bin/pendulum.o: src/pendulum.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pendulum'
+#  Last modified 2022-08-01 22:14:34.393276205
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+.PRECIOUS: bin/DataPoints.o bin/DataReader.o bin/EqSolver.o bin/FCmatrixAlgo.o bin/Fitter.o bin/FourierDT.o bin/Functor.o bin/Functor3D.o bin/IntegDeriv.o bin/IntegDeriv3D.o bin/Interpolator.o bin/Material.o bin/MonteCarlo.o bin/MyFunction.o bin/MyFunction3D.o bin/ODE_analysis.o bin/ODEpoint.o bin/ODEsolver.o bin/OpticalMat.o bin/RootCalculator.o bin/Rwalk1D.o bin/functions.o bin/lightmap.o bin/pendulum.o bin/pendulum_parametric.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-10-14 00:17:11.531614933
+#  File has been updated.
+#  Successfully updated.
+
+bin/pendulum_parametric.o: src/pendulum_parametric.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pendulum_parametric'
+#  Last modified 2022-08-01 22:14:35.845315205
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+lib: lib/libBIU.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/Interpolator.o: src/Interpolator.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Interpolator'
+#  Last modified 2022-08-01 22:14:22.340955376
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+main/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:16:55.049294985
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/MonteCarlo.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/OpticalMat.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/functions.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 45):
+	@echo cleaning...
+	rm -f $(wildcard bin/*) $(wildcard lib/*)
+
+# Not a target:
+src/EqSolver.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/RootCalculator.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/lightmap.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/ODEsolver.o: src/ODEsolver.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ODEsolver'
+#  Last modified 2022-08-01 22:14:31.365195108
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/RootCalculator.o: src/RootCalculator.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'RootCalculator'
+#  Last modified 2022-08-01 22:14:37.249352986
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+clean_images:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 49):
+	@echo cleaning...
+	rm -f $(wildcard images/*.png)
+
+# Not a target:
+src/Rwalk1D.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/DataPoints.o: src/DataPoints.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'DataPoints'
+#  Last modified 2022-08-01 22:08:51.361497729
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+py:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 41):
+	python3.9 main/ODEdmd.py
+
+# Not a target:
+src/IntegDeriv3D.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/Material.o: src/Material.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Material'
+#  Last modified 2022-08-01 22:14:23.980998717
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+ 
+# Not a target:
+src/Functor3D.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/pend_fourier.o: main/pend_fourier.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pend_fourier'
+#  File is an intermediate prerequisite.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/ODEpoint.o: src/ODEpoint.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ODEpoint'
+#  Last modified 2022-08-01 22:14:29.909156225
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/ODE_analysis.o: src/ODE_analysis.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'ODE_analysis'
+#  Last modified 2022-08-01 22:14:29.489145026
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/Rwalk1D.o: src/Rwalk1D.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Rwalk1D'
+#  Last modified 2022-08-01 22:14:38.64139051
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/Fitter.o: src/Fitter.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Fitter'
+#  Last modified 2022-08-01 22:14:11.072660398
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+src/pendulum.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.25051332
+#  File has been updated.
+#  Successfully updated.
+
+bin/DataReader.o: src/DataReader.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'DataReader'
+#  Last modified 2022-08-01 22:08:53.333569334
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/OpticalMat.o: src/OpticalMat.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'OpticalMat'
+#  Last modified 2022-08-01 22:14:32.717231278
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+bin/MonteCarlo.o: src/MonteCarlo.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'MonteCarlo'
+#  Last modified 2022-08-01 22:14:25.345034848
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+all: bin/main.exe bin/main2.exe bin/pend_fourier.exe bin/tFitter.exe
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+run:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 38):
+	./bin/main.exe
+
+# Not a target:
+src/Material.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/tFitter.exe: bin/tFitter.o lib/libBIU.a
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tFitter'
+#  Last modified 2022-08-01 22:14:44.129539069
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 30):
+	@echo executable... $< [$@]
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l BIU $(ROOT_LIB) 
+
+bin/MyFunction.o: src/MyFunction.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'MyFunction'
+#  Last modified 2022-08-01 22:14:27.981104856
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/MyFunction3D.o: src/MyFunction3D.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'MyFunction3D'
+#  Last modified 2022-08-01 22:14:26.669069981
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/FCmatrixAlgo.o: src/FCmatrixAlgo.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'FCmatrixAlgo'
+#  Last modified 2022-08-01 22:14:08.82860227
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+src/DataReader.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/tFitter.o: main/tFitter.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'tFitter'
+#  File is an intermediate prerequisite.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/lightmap.o: src/lightmap.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'lightmap'
+#  Last modified 2022-08-01 22:14:22.648963509
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+main/pend_fourier.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main/tFitter.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/Functor3D.o: src/Functor3D.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Functor3D'
+#  Last modified 2022-08-01 22:14:17.144818727
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/EqSolver.o: src/EqSolver.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'EqSolver'
+#  Last modified 2022-08-01 22:14:07.444566527
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+src/Functor.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/main2.exe: bin/main2.o lib/libBIU.a
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main2'
+#  Last modified 2022-08-01 22:37:31.354061815
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 30):
+	@echo executable... $< [$@]
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l BIU $(ROOT_LIB) 
+
+bin/main.exe: bin/main.o lib/libBIU.a
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-08-01 22:35:25.821850684
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 30):
+	@echo executable... $< [$@]
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l BIU $(ROOT_LIB) 
+
+# Not a target:
+src/Fitter.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/ODEsolver.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/MyFunction3D.cpp:
+ 
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/MyFunction.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+bin/pend_fourier.exe: bin/pend_fourier.o lib/libBIU.a
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'pend_fourier'
+#  Last modified 2022-08-01 22:14:42.365491212
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 30):
+	@echo executable... $< [$@]
+	$(CXX) $(CXXFLAGS) -o $@ $< -I src $(EIGEN_INC)  -L $(ROOT_LIB) -L lib -l BIU $(ROOT_LIB) 
+
+bin/FourierDT.o: src/FourierDT.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'FourierDT'
+#  Last modified 2022-08-01 22:14:13.192715509
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+bin/IntegDeriv3D.o: src/IntegDeriv3D.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'IntegDeriv3D'
+#  Last modified 2022-08-01 22:14:18.784861744
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+src/IntegDeriv.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+lib/libBIU.a: bin/DataPoints.o bin/DataReader.o bin/EqSolver.o bin/FCmatrixAlgo.o bin/Fitter.o bin/FourierDT.o bin/Functor.o bin/Functor3D.o bin/IntegDeriv.o bin/IntegDeriv3D.o bin/Interpolator.o bin/Material.o bin/MonteCarlo.o bin/MyFunction.o bin/MyFunction3D.o bin/ODE_analysis.o bin/ODEpoint.o bin/ODEsolver.o bin/OpticalMat.o bin/RootCalculator.o bin/Rwalk1D.o bin/functions.o bin/lightmap.o bin/pendulum.o bin/pendulum_parametric.o
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'libBIU'
+#  Last modified 2022-08-01 22:14:38.689391805
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 25):
+	@echo making lib...[$^]
+	ar ruv $@ $^ 
+	ranlib $@
+
+bin/functions.o: src/functions.cpp
+#  Precious file (prerequisite of .PRECIOUS).
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'functions'
+#  Last modified 2022-08-01 22:14:15.472774984
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 34):
+	@echo compiling... $< [$@]
+	$(CXX) $(CXXFLAGS) -c -o $@ $< -I src $(EIGEN_INC) 
+
+# Not a target:
+main/main2.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:37:27.190044886
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/FourierDT.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/ODEpoint.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/FCmatrixAlgo.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/ODE_analysis.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-01 22:07:22.246513204
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=74/1024=7%, Rehash=0, Collisions=22/544=4%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# General ('VPATH' variable) search path:
+# main:src
+
+# strcache buffers: 1 (0) / strings = 211 / storage = 2797 B / avg = 13 B
+# current buf: size = 8162 B / used = 2797 B / count = 211 / avg = 13 B
+
+# strcache performance: lookups = 422 / hit rate = 50%
+# hash-table stats:
+# Load=211/8192=3%, Rehash=0, Collisions=4/422=1%
+# Finished Make data base on Sun Oct 30 19:52:49 2022
+
+ 

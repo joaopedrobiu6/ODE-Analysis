@@ -1,0 +1,75 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/joaobiu/ODE-Analysis'
+ 
+echo compiling... src/DataPoints.cpp [bin/DataPoints.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/DataPoints.o src/DataPoints.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/DataReader.cpp [bin/DataReader.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/DataReader.o src/DataReader.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/EqSolver.cpp [bin/EqSolver.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/EqSolver.o src/EqSolver.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/FCmatrixAlgo.cpp [bin/FCmatrixAlgo.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/FCmatrixAlgo.o src/FCmatrixAlgo.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/Fitter.cpp [bin/Fitter.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/Fitter.o src/Fitter.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/FourierDT.cpp [bin/FourierDT.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/FourierDT.o src/FourierDT.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/Functor.cpp [bin/Functor.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/Functor.o src/Functor.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/Functor3D.cpp [bin/Functor3D.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/Functor3D.o src/Functor3D.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/IntegDeriv.cpp [bin/IntegDeriv.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/IntegDeriv.o src/IntegDeriv.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/IntegDeriv3D.cpp [bin/IntegDeriv3D.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/IntegDeriv3D.o src/IntegDeriv3D.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/Interpolator.cpp [bin/Interpolator.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/Interpolator.o src/Interpolator.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/Material.cpp [bin/Material.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/Material.o src/Material.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/MonteCarlo.cpp [bin/MonteCarlo.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/MonteCarlo.o src/MonteCarlo.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/MyFunction.cpp [bin/MyFunction.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/MyFunction.o src/MyFunction.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/MyFunction3D.cpp [bin/MyFunction3D.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/MyFunction3D.o src/MyFunction3D.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/ODE_analysis.cpp [bin/ODE_analysis.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/ODE_analysis.o src/ODE_analysis.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/ODEpoint.cpp [bin/ODEpoint.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/ODEpoint.o src/ODEpoint.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/ODEsolver.cpp [bin/ODEsolver.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/ODEsolver.o src/ODEsolver.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/OpticalMat.cpp [bin/OpticalMat.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/OpticalMat.o src/OpticalMat.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/RootCalculator.cpp [bin/RootCalculator.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/RootCalculator.o src/RootCalculator.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/Rwalk1D.cpp [bin/Rwalk1D.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/Rwalk1D.o src/Rwalk1D.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/functions.cpp [bin/functions.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/functions.o src/functions.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/lightmap.cpp [bin/lightmap.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/lightmap.o src/lightmap.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/pendulum.cpp [bin/pendulum.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/pendulum.o src/pendulum.cpp -I src -I /usr/include/eigen3 
+echo compiling... src/pendulum_parametric.cpp [bin/pendulum_parametric.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/pendulum_parametric.o src/pendulum_parametric.cpp -I src -I /usr/include/eigen3 
+echo making lib...[bin/DataPoints.o bin/DataReader.o bin/EqSolver.o bin/FCmatrixAlgo.o bin/Fitter.o bin/FourierDT.o bin/Functor.o bin/Functor3D.o bin/IntegDeriv.o bin/IntegDeriv3D.o bin/Interpolator.o bin/Material.o bin/MonteCarlo.o bin/MyFunction.o bin/MyFunction3D.o bin/ODE_analysis.o bin/ODEpoint.o bin/ODEsolver.o bin/OpticalMat.o bin/RootCalculator.o bin/Rwalk1D.o bin/functions.o bin/lightmap.o bin/pendulum.o bin/pendulum_parametric.o]
+ar ruv lib/libBIU.a bin/DataPoints.o bin/DataReader.o bin/EqSolver.o bin/FCmatrixAlgo.o bin/Fitter.o bin/FourierDT.o bin/Functor.o bin/Functor3D.o bin/IntegDeriv.o bin/IntegDeriv3D.o bin/Interpolator.o bin/Material.o bin/MonteCarlo.o bin/MyFunction.o bin/MyFunction3D.o bin/ODE_analysis.o bin/ODEpoint.o bin/ODEsolver.o bin/OpticalMat.o bin/RootCalculator.o bin/Rwalk1D.o bin/functions.o bin/lightmap.o bin/pendulum.o bin/pendulum_parametric.o 
+ranlib lib/libBIU.a
+echo compiling... main/main.cpp [bin/main.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/main.o main/main.cpp -I src -I /usr/include/eigen3 
+echo executable... bin/main.o [bin/main.exe]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -o bin/main.exe bin/main.o -I src -I /usr/include/eigen3  -L -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic -L lib -l BIU -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic 
+echo compiling... main/main2.cpp [bin/main2.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/main2.o main/main2.cpp -I src -I /usr/include/eigen3 
+echo executable... bin/main2.o [bin/main2.exe]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -o bin/main2.exe bin/main2.o -I src -I /usr/include/eigen3  -L -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic -L lib -l BIU -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic 
+echo compiling... main/pend_fourier.cpp [bin/pend_fourier.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/pend_fourier.o main/pend_fourier.cpp -I src -I /usr/include/eigen3 
+echo executable... bin/pend_fourier.o [bin/pend_fourier.exe]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -o bin/pend_fourier.exe bin/pend_fourier.o -I src -I /usr/include/eigen3  -L -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic -L lib -l BIU -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic 
+echo compiling... main/tFitter.cpp [bin/tFitter.o]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -c -o bin/tFitter.o main/tFitter.cpp -I src -I /usr/include/eigen3 
+echo executable... bin/tFitter.o [bin/tFitter.exe]
+g++ -std=c++17 -pthread -std=c++17 -m64 -I/home/joaobiu/root/include -fPIC  -o bin/tFitter.exe bin/tFitter.o -I src -I /usr/include/eigen3  -L -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic -L lib -l BIU -L/home/joaobiu/root/lib -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -Wl,-rpath,/home/joaobiu/root/lib -pthread -lm -ldl -rdynamic 
+rm bin/main2.o bin/main.o bin/pend_fourier.o bin/tFitter.o
+make: Leaving directory '/home/joaobiu/ODE-Analysis'
+ 
